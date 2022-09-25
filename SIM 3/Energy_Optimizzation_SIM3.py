@@ -36,7 +36,7 @@ wave_length = 0.005         # lunghezza d'onda di un segnale 5G, sono onde milli
 W_u = 1.0 * 10**6           # banda assegnata all'utente (1 MHz)
 N_0 = 10**(-15.4)           # (DPS) -154 dBm/Hz = 10^-17.4 mW/Hz        
 P_N = W_u * N_0             # potenza del rumore in mW
-alpha = 0                   # fattore di peso per la perdita Accuratezza (potremmo cambiarlo)
+alpha = 0                   # fattore di peso per la perdita Accuratezza 
 delta = 0.85                # Accuratezza minima richiesta
 lat_max = 0.85              # latenza massima accettata       
 
@@ -102,7 +102,7 @@ for i in range(t_start, t_end, t_opt):
    
     A = 1 - ( 1.578 * m.exp(-6.5*10**-3 * m.sqrt(s))  )         # Accuratezza
     Q = 1 - A                                                   # Perdita di Accuratezza
-    elab = ( 7 * pow(10, -10) * pow(s, 3/2) + 0.083  )          # modello di elaborazione del carico 1 TFLOPS = 1x10^12 FLOPS
+    elab = ( 7 * pow(10, -10) * pow(s, 3/2) + 0.083  )          # modello di elaborazione del carico TFLOPS 
 
     latenza_tot = (sigma * s)/R + elab/f + (sigma * K)/V        # calcolo latenza totale
 
@@ -204,12 +204,12 @@ for i in range(t_start, t_end, t_opt):
     print("Iterazione: ",i)
     print("Fading:", G_t*G_r*LOSS)
     
-    R = W_u * (m.log(1 + SNR)/m.log(2) )    # calcolo del data rate e aggiunta nel vettore
+    R = W_u * (m.log(1 + SNR)/m.log(2) )    # calcolo del data rate
 
    
     A = 1 - ( 1.578 * m.exp(-6.5*10**-3 * m.sqrt(s))  )        # Accuratezza
     Q = 1 - A                                                  # Perdita di Accuratezza
-    elab = ( 7 * pow(10, -10) * pow(s, 3/2) + 0.083  )         # modello di elaborazione del carico 1 TFLOPS = 1x10^12 FLOPS
+    elab = ( 7 * pow(10, -10) * pow(s, 3/2) + 0.083  )         # modello di elaborazione del carico TFLOPS 
 
     latenza_tot = (sigma * s)/R + elab/f + (sigma * K)/V       # calcolo latenza totale
 
@@ -312,12 +312,12 @@ for i in range(t_start, t_end, t_opt):
     print("Iterazione: ",i)
     print("Fading:", G_t*G_r*LOSS)
     
-    R = W_u * (m.log(1 + SNR)/m.log(2) )    # calcolo del data rate e aggiunta nel vettore
+    R = W_u * (m.log(1 + SNR)/m.log(2) )    # calcolo del data rate
 
    
     A = 1 - ( 1.578 * m.exp(-6.5*10**-3 * m.sqrt(s))  )        # Accuratezza
     Q = 1 - A                                                  # Perdita di Accuratezza
-    elab = ( 7 * pow(10, -10) * pow(s, 3/2) + 0.083  )         # modello di elaborazione del carico 1 TFLOPS = 1x10^12 FLOPS
+    elab = ( 7 * pow(10, -10) * pow(s, 3/2) + 0.083  )         # modello di elaborazione del carico TFLOPS 
 
     latenza_tot = (sigma * s)/R + elab/f + (sigma * K)/V       # calcolo latenza totale
 
