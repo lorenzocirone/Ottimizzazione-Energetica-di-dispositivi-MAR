@@ -218,7 +218,7 @@ gx1.grid()
 
 gx2.set_title("Distanza AP - UE")
 gx2.plot(d, color='blue')
-gx2.set_xlabel("t(m)")
+gx2.set_xlabel("t(min)")
 gx2.set_ylabel("d(m)")
 gx2.grid()
 
